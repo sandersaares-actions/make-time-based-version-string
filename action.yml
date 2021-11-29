@@ -1,0 +1,15 @@
+name: Create a time-based version string
+author: Sander Saares
+description: Generates a version string of the form [branch-]yyyy.Mdd.s-commit[-type].
+inputs:
+  buildType:
+    description: Build type suffix to add to version string, to differentiate prerelease builds (with suffix) and release builds (no suffix).
+outputs:
+  VERSION_STRING:
+    description: 'The generated version string'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'crosshair'
+  color: 'red'
